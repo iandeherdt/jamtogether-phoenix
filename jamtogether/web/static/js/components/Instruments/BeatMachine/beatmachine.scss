@@ -1,0 +1,26 @@
+$piano-key-highlight-color: #5ED0D0;
+
+.beat-machine-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 875px;
+  margin: auto;
+  justify-content: center;
+  * {
+    user-select: none;
+  }
+  .pad {
+    position: relative;
+    width: 20vw;
+    max-width: 175px;
+    max-height: 175px;
+    height: 20vw;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 1px;
+    cursor: pointer;
+  }
+  .drumpad-highlight {
+    background: $piano-key-highlight-color;
+  }
+}

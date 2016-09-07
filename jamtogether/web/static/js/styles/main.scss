@@ -1,0 +1,63 @@
+$background: #fff;
+
+body {
+  background: $background;
+  font-family: "Helvetica Neue", serif;
+}
+
+
+// piano keyboard styling
+$piano-black-key-color: #000;
+$piano-white-key-color: #fff;
+
+$piano-key-highlight-color: #5ED0D0;
+
+@mixin ease-out-quint($property, $time) {
+  -webkit-transition: $property $time cubic-bezier(0.230, 1.000, 0.320, 1.000);
+     -moz-transition: $property $time cubic-bezier(0.230, 1.000, 0.320, 1.000);
+       -o-transition: $property $time cubic-bezier(0.230, 1.000, 0.320, 1.000);
+          transition: $property $time cubic-bezier(0.230, 1.000, 0.320, 1.000); /* easeOutQuint */
+}
+
+@mixin align-items-bottom() {
+  //align text bottom
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.piano-keyboard-keys-wrapper {
+  background: $piano-white-key-color;
+  display: flex;
+
+  .piano-key {
+    @include align-items-bottom();
+    @include ease-out-quint(background, 500ms);
+    border: 1px solid $piano-black-key-color;
+    height: 150px; //arbitrary height.
+    position: relative;
+
+
+    &.piano-key-highlight {
+      background: $piano-key-highlight-color;
+    }
+
+    .piano-black-key {
+      @include align-items-bottom();
+      @include ease-out-quint(background, 500ms);
+
+      background: $piano-black-key-color;
+      color: $piano-white-key-color;
+      height: 55%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: translateX(50%);
+      width: 50%; //50 % of white key
+      z-index: 1;
+      &.piano-key-highlight {
+        background: $piano-key-highlight-color;
+      }
+    }
+  }
+}
