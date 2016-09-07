@@ -73,7 +73,12 @@ module.exports = {
         "mimetype=image/svg+xml",
         "name=images/[name].[ext]"
       ].join("&"),
-    }],
+    },
+    {test: /\.scss$/, loader: 'style!css!autoprefixer?browsers=last 2 version!sass?outputStyle=expanded'},
+    { test: /\.jp?g$/, loader: 'file-loader' },
+    { test: /\.ogg$/, loader: 'file-loader' },
+    { test: /\.aif$/, loader: 'file-loader' }
+  ],
   },
   postcss: [
     Autoprefixer({
