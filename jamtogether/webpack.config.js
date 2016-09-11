@@ -45,7 +45,10 @@ module.exports = {
       ].join("&"),
     }, {
       test: /\.jpg$/,
-      loader: "file?name=images/[name].[ext]",
+      loader: "url?" + [
+        "limit=100000",
+        "mimetype=image/jpg"
+      ].join("&"),
     }, {
       test: /\.(woff|woff2)$/,
       loader: "url?" + [
@@ -75,8 +78,8 @@ module.exports = {
       ].join("&"),
     },
     {test: /\.scss$/, loader: 'style!css!autoprefixer?browsers=last 2 version!sass?outputStyle=expanded'},
-    { test: /\.jp?g$/, loader: 'file-loader' },
-    { test: /\.ogg$/, loader: 'file-loader' },
+    // { test: /\.jp?g$/, loader: 'file-loader' },
+    { test: /\.ogg$/, loader: 'url-loader' },
     { test: /\.aif$/, loader: 'file-loader' }
   ],
   },

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
+
 import { SteinwayGrand } from '../Instruments/SteinwayGrand/SteinwayGrand.js';
 import { FMsynth } from '../Instruments/FMsynth/FMsynth.js';
 import { ComputerKeyboard } from '../KeyControllers/ComputerKeyboard.js';
 import { BeatMachine } from '../Instruments/BeatMachine/BeatMachine.js';
-
 class Index extends Component {
   constructor() {
     super();
@@ -19,7 +19,6 @@ class Index extends Component {
         <button onClick={()=> this.setState({controlledInstrument: 'piano'})}>Play with the piano (default)</button>
         <button onClick={()=> this.setState({controlledInstrument: 'synth'})}>Play with the synth</button>
         <button onClick={()=> this.setState({controlledInstrument: 'beatMachine'})}>Play with the beat machine</button>
-
         {/* the piano */}
         <h2>piano:</h2>
         <ComputerKeyboard instrument="piano" controlled={this.state.controlledInstrument === 'piano'}>
@@ -32,7 +31,7 @@ class Index extends Component {
           <FMsynth />
         </ComputerKeyboard>
 
-        {/* the beat machine */}
+        {/*the beat machine*/}
         <h2>Beat machine:</h2>
         <ComputerKeyboard instrument="beatMachine" controlled={this.state.controlledInstrument === 'beatMachine'}>
           <BeatMachine />

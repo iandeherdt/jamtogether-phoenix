@@ -10,7 +10,7 @@ export class FMsynth extends Component {
   constructor(props) {
     super(props);
 
-    this.sampler = new Tone.SimpleFM({
+    this.sampler = new Tone.FMSynth({
       'modulationIndex': 12.22,
       'carrier': {
         'envelope': {
