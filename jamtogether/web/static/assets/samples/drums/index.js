@@ -1,0 +1,16 @@
+module.exports = {
+  C3: require('./kick/808bd03.ogg'),
+  D3: require('./snares/808sd01.ogg'),
+  E3: require('./hats/909-squoosh-hat.ogg'),
+  F3: require('./rides/909-bright-ride.ogg'),
+  G3: require('./crashes/18_inch_crash.ogg'),
+  A3: require('./crashes/18_inch_crash.ogg'),
+  B3: require('./crashes/18_inch_crash.ogg'),
+  C4: require('./kick/808bd03.ogg'),
+  D4: require('./snares/808sd01.ogg'),
+  E4: require('./hats/909-squoosh-hat.ogg'),
+  F4: require('./rides/909-bright-ride.ogg'),
+  G4: require('./crashes/18_inch_crash.ogg'),
+  A4: require('./crashes/18_inch_crash.ogg'),
+  B4: require('./crashes/18_inch_crash.ogg'),
+};

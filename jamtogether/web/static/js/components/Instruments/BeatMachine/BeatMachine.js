@@ -46,7 +46,7 @@ export class BeatMachine extends Component {
       const highlightClass = note.depressed ? 'drumpad-highlight pad' : 'pad';
       if (key[1] !== 'b') {
         pads.push(
-          <div className={highlightClass} onClick={this._triggerSample.bind(this, key)}>
+          <div key={key} className={highlightClass} onClick={this._triggerSample.bind(this, key)}>
             {key}
             <Ink />
           </div>
